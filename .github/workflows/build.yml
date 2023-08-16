@@ -117,7 +117,7 @@ jobs:
       run: cp install_output/lib/libSDL2-2.0.dylib SDL2-CS/native/${{ matrix.platform.name }}/libSDL2.dylib
       if: runner.os == 'macOS'
     - name: Create pull request
-      uses: peter-evans/create-pull-request@v4
+      uses: RushingAlien/create-pull-request@v4
       with:
         commit-message: Update ${{ matrix.platform.name }} SDL binaries
         title: Update ${{ matrix.platform.name }} SDL binaries
@@ -152,7 +152,7 @@ jobs:
         cp Xcode/SDL/Products/SDL2.xcframework/ios-arm64_x86_64-simulator/SDL2.framework/SDL2       SDL2-CS/native/ios/SDL2.xcframework/ios-arm64_x86_64-simulator/SDL2.framework/SDL2;
         cp Xcode/SDL/Products/SDL2.xcframework/ios-arm64_x86_64-simulator/SDL2.framework/Info.plist SDL2-CS/native/ios/SDL2.xcframework/ios-arm64_x86_64-simulator/SDL2.framework/Info.plist;
     - name: Create pull request
-      uses: peter-evans/create-pull-request@v4
+      uses: RushingAlien/create-pull-request@v4
       with:
         commit-message: Update iOS SDL binaries
         title: Update iOS SDL binaries
